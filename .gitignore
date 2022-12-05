@@ -1,5 +1,6 @@
 # for-local-env
 .vscode
+*_template/
 *dev_env/
 *projects/
 *other/
