@@ -1,4 +1,9 @@
+# for-local-env
 .vscode
+*dev_env/
+*projects/
+*other/
+
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
