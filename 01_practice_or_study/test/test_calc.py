@@ -1,11 +1,16 @@
 import pytest
-from unittest.mock import patch
 from calc import calc
 
-@patch("calc.result_flg", False)
-def test_calc(mocker):
-   
-    result = calc()
+params = [
+    (1, 2, 3, 6),
+    (3, 4, 7, 14),
+    (4, 5, 6, 15),
+]
 
-    assert result == {"result_flg": False}
-    
+
+@pytest.mark.parametrize(
+    "param_a, param_b, param_c, result",
+    params)
+def test_calc(param_a, param_b, param_c, result):
+    ans = calc(param_a, param_b, param_c)
+    assert ans == result
