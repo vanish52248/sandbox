@@ -17,15 +17,18 @@ cur.execute("INSERT INTO persons(name) VALUES('Mike')")
 conn.commit()
 
 # READ
-cur.execute("SELECT * FROM persons")
+name = "Mike"
+cur.execute("SELECT * FROM persons WHERE name = '{}'".format(name))
+conn.commit()
 print(cur.fetchall())
 
 # UPDATE
-cur.execute("UPDATE persons SET name = 'Michel' WHERE name  = 'Mike'")
+name2 = "Mimi"
+cur.execute("UPDATE persons SET name = '{}' WHERE name = '{}'".format(name2, name))
 conn.commit()
 
 # DELETE
-cur.execute("DELETE FROM persons WHERE name = 'Michel'")
+cur.execute("DELETE FROM persons WHERE name = '{}'".format(name2))
 conn.commit()
 
 # 後処理
