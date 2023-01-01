@@ -1,10 +1,10 @@
-def calc(n):
-    f = n * (n-1)
-    return f
+def f(x):
+    # 再記関数の終了条件
+    if x == 0:
+        return 1
+    else:
+        return x * f(x-1)
+
 
 n = int(input())
-
-
-print(0 if n == 0 else calc(n))
-
-
+print(f(n))
