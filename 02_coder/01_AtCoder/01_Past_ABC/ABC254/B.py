@@ -1,8 +1,16 @@
 n = int(input())
 
-for i in range(31):
-    for j in range(31):
+lst = []
+for i in range(1, n+1):
+    temp = [0]*i
+    lst.append(temp)
+
+for i in range(len(lst)):
+    for j in range(len(lst[i])):
         if j == 0 or j == i:
-            print(1)
+            lst[i][j] = 1
         else:
-            print(i-1+j-1+i-1*j)
+            lst[i][j] = lst[i-1][j-1] + lst[i-1][j]
+
+for i in lst:
+    print(*i)
