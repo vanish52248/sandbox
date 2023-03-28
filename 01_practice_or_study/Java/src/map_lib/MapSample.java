@@ -3,7 +3,8 @@ import java.util.HashMap;
 
 public class MapSample {
     public static void main(String[] args) throws Exception {
-        // ①連想配列を定義して出力
+        // ①型定義のジェネリクスは基本データ型ではなくラッパークラスを定義する
+        // ★後からTreeMapなどが作れるようにざっくりと親クラスのMap型で定義する
         Map<String, String> exMap = new HashMap<>();
         System.out.println("① 初期化:" + exMap);
 
@@ -28,19 +29,20 @@ public class MapSample {
         System.out.println("⑤ 値取得(存在):" + result);
         System.out.println("⑤ 値取得(不存在):" + result2);
 
-        // ⑥連想配列のキーをfor文で出力
+        // ★⑥連想配列のキーと値をfor文で出力
 		for (String key : exMap.keySet()) {
-            System.out.println("⑥ キー出力" + key);            
+            System.out.println("⑥ -1 キー出力:" + key);
+            System.out.println("⑥ -1 値出力:" + exMap.get(key));
         }
 
         // ⑥連想配列の値をfor文で出力
         for (String value : exMap.values()) {
-            System.out.println("⑥ 値出力:" + value);            
+            System.out.println("⑥ -2 値出力:" + value);
         }
 
         // ⑥連想配列のキーと値をfor文で出力
         for (Map.Entry<String, String> entry : exMap.entrySet()) {
-            System.out.println("⑥ キーと値出力:" + entry.getKey() + ":" + entry.getValue());
+            System.out.println("⑥ -3 キーと値出力:" + entry.getKey() + ":" + entry.getValue());
         }
 
         // ⑦連想配列のキーを削除して出力
