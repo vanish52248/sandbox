@@ -53,8 +53,7 @@ cd sandbox/01_practice_or_study/java
 ## ④カバレッジレポートの取得
 ```
 # test配下全てのクラスのカバレッジ取得
-mvn test jacoco:report
-
-# test配下の指定したクラスのみカバレッジ取得
-mvn test -Dtest=ScoreTest.java jacoco:report
+mvn clean jacoco:prepare-agent test jacoco:report
 ```
+
+## ⑤src/target/site/jacoco/index.htmlを参照してカバレッジをGUI上で確認
