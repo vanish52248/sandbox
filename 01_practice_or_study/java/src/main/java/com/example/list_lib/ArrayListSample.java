@@ -51,6 +51,14 @@ public class ArrayListSample {
             System.out.println("pointsの中に10が含まれている");
             System.out.println(points.indexOf(10) + "番目に10が存在する");
         }
+        System.out.println();
+
+        // 配列型を定義
+        String[] wordList = {"and", "not", "that", "the", "you"};
+        // 配列型をList型に変換する Arrays.asList() を使用することで contains()が使用できるので存在判定を行う
+        if (Arrays.asList(wordList).contains("and")) {
+            System.out.println("wordListの中に'and'が含まれている。");
+        }
 
         // 全ての要素を削除
         points.clear();
