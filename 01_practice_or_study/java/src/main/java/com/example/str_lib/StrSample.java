@@ -29,6 +29,7 @@ public class StrSample {
         String s8  = " a b c ";
         String s9 = "a1b1c2d2e1";
         String s10 = "abc,def:ghi";
+        String s11 = "ABCDEFGHIJKLMNOP";
 
         if (s2.equals(s3)) {
             System.out.println("s2とs3は等しい");
@@ -83,5 +84,18 @@ public class StrSample {
         Valid v = new Valid();
         boolean result = v.isValidPlayerName(name);
         System.out.println("バリデーションの結果は" + result + "です");
+
+        // 文字列を1文字ずつfor文でループして判定を行う
+        for (int i = 0; i < s11.length()-1; i++) {
+            // ループのインデックスで文字列の順で数えてchar変数に代入
+            char temp = s11.charAt(i);
+            System.out.println("temp:" + temp);
+
+            if (temp == 'M' || temp == 'F') {
+                System.out.println("No");
+                break;
+            }
+        }
+
     }
 }
