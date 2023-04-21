@@ -15,7 +15,7 @@ public class ScoreTest {
     @Before
     public void setUp() {
         /*
-         * @Beforeアノテーションがついているメソッドは、各テストを実行するより前に実行される
+         * @Beforeアノテーションがついているメソッドは、各テストを実行するより前に毎回実行される
          * 何か共通系の処理などを行うために利用する
          */
         
@@ -25,7 +25,7 @@ public class ScoreTest {
     @After
     public void termDown() {
         /*
-         * @Afterアノテーションがついているメソッドは、各テストが実施された後に実行される
+         * @Afterアノテーションがついているメソッドは、各テストが実施された後に毎回実行される
          * Beforeで外部リソースを割り当てて、Afterで解放するといった方法で利用する
          */
         
