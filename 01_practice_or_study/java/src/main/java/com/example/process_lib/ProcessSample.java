@@ -1,5 +1,5 @@
-// 10
-// in diesem fall sollten sie no und nicht yes ausgeben
+// 11
+// in and diesem fall sollten sie no und nicht yes ausgeben
 
 package com.example.process_lib;
 
@@ -17,10 +17,13 @@ public class ProcessSample {
         }
 
         for (String word: wordArray) {
+            System.out.println("word: " +word);
             if (Arrays.asList(wordList).contains(word)) {
                 System.out.println("Yes");
-                // 正常終了させるexit
-                System.exit(0);
+                // Java自体を終了する。exit語はJavaの実行は続かない
+                // System.exit(0);
+                // ★そのメソッドを終了する。return後もJavaの実行は続く(基本こっち)
+                return;
             }
         }
         System.out.println("No");
