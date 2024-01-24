@@ -2,13 +2,21 @@ package main
 
 import (
 	"fmt"
-	"strings"
 )
 
 func main() {
-	var s string
-	fmt.Scan(&s)
-	slice := strings.Replace(s, ",", " ", -1)
+	var a, b, c, d int
+	fmt.Scanf("%d %d %d %d\n", &a, &b, &c, &d)
 
-	fmt.Println(slice)
+	fmt.Println(Max(a*b, c*d))
+}
+
+func Max(a int, b int) int {
+	if a > b {
+		return a
+	} else if a < b {
+		return b
+	} else {
+		return a
+	}
 }
