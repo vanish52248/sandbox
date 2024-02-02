@@ -1,9 +1,19 @@
 package main
 
-import (
-	"fmt"
-)
+import "fmt"
+
+type Student struct {
+	name    string
+	math    float64
+	english float64
+}
+
+func (student Student) CallAvg() {
+	fmt.Println(student.name, (student.english+student.math)/2)
+}
 
 func main() {
-	fmt.Println("test")
+	s1 := Student{"test", 40, 50}
+	s1.CallAvg()
+
 }
