@@ -10,7 +10,6 @@ func main() {
 
 	for i, v := range S {
 		if i+1 > 0 && (i+1)%2 == 0 {
-			fmt.Println(i, string(v))
 			if string(v) != "0" {
 				fmt.Println("No")
 				return
