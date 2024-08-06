@@ -21,9 +21,16 @@ func main() {
 
 	fmt.Println("value:", value, "exists:", ok)
 
+	// キー存在確認で分岐する場合
 	if ok {
 		fmt.Println("存在する為valueを表示: ", value)
 	} else {
 		fmt.Println(key, "というキーは存在しません。")
+	}
+
+	// キーバリューセットのforループ
+	// key, value については使用しない場合 _ で省略も可能
+	for key, value := range fruitsPriceMap {
+		fmt.Println("key:", key, "value:", value)
 	}
 }
